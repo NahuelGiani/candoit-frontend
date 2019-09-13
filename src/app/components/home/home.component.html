@@ -1,0 +1,14 @@
+<h1 class="display-5" style="animated fadeIn fast">Clima en Buenos Aires</h1>
+<p class="lead" style="animated fadeIn">El estado actual de todas las localidades</p>
+<hr>
+<div class="card-columns">
+  <div class="card" *ngFor="let clima of climas" style="animated fadeIn fast">
+      <div class="card-header">{{ clima.name }}</div>
+      <img src="./assets/img/{{ clima.tipoClima }}.png" width="17rem" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Temperatura: {{ clima.weather.temp }} °</h5>
+        <p class="card-text">Tiempo: {{ clima.weather.description }}<br>
+        Humedad: {{ clima.weather.humidity }} %</p>
+      </div>
+  </div>
+</div>
